@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BallMove : MonoBehaviour {
+
+public Transform BallChecker;
+public float force;
+bool gameStarted = false;
+
+
+Rigidbody2D myRB;
+// Use this for initialization
+void Start () {
+
+transform.position = new Vector2 (0, -4.311f);
+//GetComponent<Rigidbody>().Ad
+
+}
+// Update is called once per frame
+void Update () {
+
+if (Input.GetKey(KeyCode.Space) && gameStarted == false)
+{
+myRB = GetComponent<Rigidbody2D>();
+myRB.AddForce (new Vector2 (1f, 0.5f) * Time.deltaTime * force);
+gameStarted = true;
+
+transform.SetParent(null);
+}
+
+if (transform.position.y < BallChecker.transform.position
+
+UnityEngine.SceneManagement.Sc
+} } }
